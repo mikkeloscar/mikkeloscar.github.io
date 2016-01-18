@@ -1,0 +1,5 @@
+{{ education.start_date | date: "%B, %Y" }} - {% if education.end_date == null %}
+  present
+{% else %}
+  {{ education.end_date | date: "%B, %Y" }}
+{% endif %}

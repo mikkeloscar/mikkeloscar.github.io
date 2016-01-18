@@ -1,23 +1,28 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<div class="hero-inner container">
+  <img src="{{ site.root }}/assets/{{ site.headshot }}" class="headshot">
+  <h3>Hello, I'm</h3>
+  <h1>{{ site.name }}</h1>
+  <h3>{{ site.description }}</h3>
+  <nav class="main-nav">
+    {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
     {% endfor %}
-  </ul>
+  </nav>
+  <div class="social">
+    <!-- <a href="https://github.com/{{site.github_username}}"class="fa fa-envelope fa-lg"></a> -->
+    <a href="mailto:{{ site.email }}" target="_blank" title="Mail" class="fa fa-envelope-o fa-lg"></a>
+    <a href="https://github.com/{{site.github_username}}" target="_blank" title="Github" class="fa fa-github fa-lg"></a>
+    <a href="https://www.linkedin.com/in/{{site.linkedin_name}}" target="_blank" title="linkedIn" class="fa fa-linkedin-square fa-lg"></a>
+  </div>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+<div class="rss">
+  <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Subscribe" class="fa fa-rss fa-lg"></a>
 </div>

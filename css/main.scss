@@ -3,19 +3,32 @@
 ---
 @charset "utf-8";
 
+// http://tenbytwenty.com/?xxxx_posts=nevis
+@font-face {
+  font-family: nevis;
+  src: url('/assets/nevis.ttf');
+}
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: Georgia, Cambria, 'Timews New Roman', Times, serif;
+$sans-font-family: 'Open Sans', sans-serif;
+$base-font-size:   20px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.7;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333;
 $background-color: #fdfdfd;
+// dark
+$intro-background-color: #111;
+$intro-font-color: #ddd;
+// light
+// $intro-background-color: #eee;
+// $intro-font-color: #222;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;

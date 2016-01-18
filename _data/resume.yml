@@ -1,0 +1,153 @@
+basics:
+  name: "Mikkel Oscar Lyderik Larsen"
+  label: "Software developer"
+  picture: "headshot.png"
+  email: "m@moscar.net"
+  phone: "(+45) 60 72 28 40"
+  website: "http://moscar.net"
+  summary: >
+    Richard hails from Tulsa. He has earned degrees from the University of
+    Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied
+    Piper, he worked for Hooli as a part time software developer. While his work
+    focuses on applied information theory, mostly optimizing lossless
+    compression schema of both the length-limited and adaptive variants, his
+    non-work interests range widely, everything from quantum computing to chaos
+    theory. He could tell you about it, but THAT would NOT be a “length-limited”
+    conversation!
+  location:
+    address: "Borups Allé 243, 3 TH"
+    postal_code: "2400"
+    city: "København NV"
+    country_code: "DK"
+    region: "Sjælland"
+    shorthand: "Copenhagen"
+  profiles:
+    github:
+      username: "mikkeloscar"
+    linkedin:
+      username: "mikkeloscar"
+
+work:
+  - company: "University of Copenhagen, IT Department"
+    position: "1st Line Supporter (Student)"
+    website: "http://it.ku.dk"
+    start_date: "2011-01-26"
+    end_date: "2015-12-01"
+    summary: >
+      Provide personal IT-support for students and employees. Write guides for
+      setting up various software. Identify critical server crashes based on
+      user reports and assigning issues to the responsible departments.
+    highlights:
+      - "Developed various tools to automate work flows for me and my colleagues."
+
+  - company: "Grammatic.al"
+    position: "Backend developer"
+    website: ""
+    start_date: "2014-02-01"
+    end_date: "2015-05-01"
+    summary: "Startup developing cloud based proofreading services for the Danish language."
+    highlights:
+      - "Responsible for backend infrastructure including CI/deployment system based on Jenkins."
+      - "Rewrote the initial Node.js backend to support redis based caching."
+
+  - company: "Freelance"
+    position: "Web development & IT support"
+    website: ""
+    start_date: "2007-01-01"
+    end_date: "present"
+    summary: >
+      Throughout my education I have had a few freelance jobs. I have developed
+      web sloutions for small companies and organisations. I have also done the
+      odd it-support for small companies.
+
+  - company: "PostNord"
+    position: "Mail carrier"
+    website: "http://postdanmark.dk"
+    start_date: "2009-06-30"
+    end_date: "2010-12-30"
+    summary: "Danish national postal service."
+
+  - company: "J.G. Cold Stores"
+    position: "Warehouse worker"
+    website: "http://jgcoldstores.dk"
+    start_date: "2009-10-12"
+    end_date: "2009-10-16"
+    summary: "Cold storage warehouse."
+
+  - company: "Scouting group - 1st Hellig Anders"
+    position: "Cleaner"
+    start_date: "2005-01-01"
+    end_date: "2007-08-01"
+    summary: ""
+
+education:
+  - institution: "University of Copenhagen"
+    website: "http://diku.dk"
+    area: "Computer Science (incomplete)"
+    degree: "Master"
+    start_date: "2014-09-01"
+    end_date: "2016-03-01"
+    courses:
+      - "Project Course: Development Studio"
+      - "Statistical methods for machine learning"
+      - "Advanced Algorithms and Data structures"
+      - "Advanced Programming"
+      - "Principles of Computer System Design"
+      - "Master's Project outside course scope"
+      - "User Interface Technology"
+      - "Advanced language processing"
+      - "Proactive Computer Security"
+
+  - institution: "University of Copenhagen"
+    website: "http://diku.dk"
+    area: "Computer Science"
+    degree: "Bachelor"
+    start_date: "2010-09-01"
+    end_date: "2014-02-07"
+    courses:
+      - "Introduction to programming"
+      - "Discrete mathematical structures"
+      - "Linear Algebra in Science"
+      - "Object-oriented programming and design"
+      - "Databases and Web programming"
+      - "Project course: System development"
+      - "Algorithms and Data Structures"
+      - "Human-Computer Interaction"
+      - "Machine architecture"
+      - "Theory of Science for Computer Science"
+      - "Introduction to Compilers"
+      - "Operation Systems and Concurrent Programming"
+      - "IT project management"
+      - "IT security"
+      - "Computer networking"
+      - "Economic principals A"
+      - "Society description A"
+      - "Mobile App Development"
+
+  - institution: "Slagelse Gymnasium"
+    website: "http://slagelse-gym.dk"
+    area: "Physics and Mathematics"
+    degree: "High School"
+    start_date: "2006-08-01"
+    end_date: "2009-06-25"
+
+languages:
+  - language: "Danish"
+    fluency: "Native speaker"
+  - language: "English"
+    fluency: "Fluent speaker"
+  - language: "German"
+    fluency: "Limited proficiency"
+
+awards:
+  - title: "Winner of Microsoft competition"
+    date: "2011-01-14"
+    awarder: "Microsoft"
+    summary: >
+      Won best implementation in a competition about implementing IE9 features.
+      Was awarded 10,000 DKK.
+
+# references:
+#   - name: "Jane Doe"
+#     reference: >
+#       Hej med dig din noob

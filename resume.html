@@ -1,0 +1,188 @@
+---
+layout: default
+title: Resume
+permalink: /resume/
+---
+
+<div class="cv">
+  <div class="cv-details">
+    <div class="photo">
+      <img src="/assets/{{ site.data.resume.basics.picture }}" class="dot">
+    </div>
+    <div class="info">
+      <h1>{{ site.data.resume.basics.name }}</h1>
+      <p>
+        {{ site.data.resume.basics.label }}
+      </p>
+      <div class="contact">
+        <ul>
+          {% if site.data.resume.basics.location.shorthand %}
+          <li>
+            <div class="icon">
+              <i class="fa fa-map-marker"></i>
+            </div><div class="text">{{ site.data.resume.basics.location.shorthand }}</div>
+          </li>
+          {% endif %}
+          {% if site.data.resume.basics.email %}
+          <li>
+            <a href="mailto:{{ site.data.resume.basics.email }}">
+              <div class="icon">
+                <i class="fa fa-envelope-o"></i>
+              </div><div class="text">
+                {{ site.data.resume.basics.email }}
+              </div>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.data.resume.basics.profiles.github.username %}
+          <li>
+            <a href="https://github.com/{{ site.data.resume.basics.profiles.github.username }}" title="github/{{ site.data.resume.basics.profiles.github.username }}">
+              <div class="icon">
+                <i class="fa fa-github"></i>
+              </div><div class="text">
+                  {{ site.data.resume.basics.profiles.github.username }}
+              </div>
+            </a>
+          </li>
+          {% endif %}
+          <!-- <li> -->
+          <!--   <div class="icon"> -->
+          <!--     <i class="fa fa-linkedin"></i> -->
+          <!--   </div> -->
+          <!--   <div class="text"> -->
+          <!--     <a href="https://www.linkedin.com/in/{{ site.data.resume.basics.profiles.linkedin.username }}"> -->
+          <!--       {{ site.data.resume.basics.profiles.linkedin.username }} -->
+          <!--     </a> -->
+          <!--   </div> -->
+          <!-- </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {% if site.data.resume.basics.summary %}
+  <div class="summary">
+    {{ site.data.resume.basics.summary }}
+  </div>
+  {% endif %}
+
+  {% if site.data.resume.work %}
+  <section class="cv-list">
+    <i class="fa fa-building float"></i>
+    <h1>Work experience</h1>
+    <ul class="item">
+      {% for work in site.data.resume.work %}
+      <li>
+        {% if work.end_date == null or work.end_date == 'present' %}
+        <i class="current"></i>
+        {% endif %}
+        <p>
+        <strong>{{ work.position }}</strong>, {% if work.website != null and work.website != "" %}
+          <a href="{{ work.website }}" class="website">{{ work.company }}</a>
+          {% else %}{{ work.company %}}{% endif %}
+        </p>
+        <p class="period">
+          {% include resume/work_period.html %}
+        </p>
+        <p>{{ work.summary }}</p>
+        <p>
+        {% if work.highlights %}
+        <ul class="highlights">
+          {% for highlight in work.highlights %}
+          <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.resume.education %}
+  <section class="cv-list">
+    <i class="fa fa-graduation-cap float"></i>
+    <h1>Education</h1>
+    <ul class="item">
+      {% for education in site.data.resume.education %}
+      <li>
+        {% if education.end_date == null or education.end_date == 'present' %}
+        <i class="current"></i>
+        {% endif %}
+        <p>
+        <strong>{{ education.area }}, {{ education.degree }}</strong>, {% if education.website != null and education.website != "" %}
+          <a href="{{ education.website }}" class="website">{{ education.institution }}</a>
+          {% else %}{{ education.institution %}}{% endif %}
+        </p>
+        <p class="period">
+          {% include resume/education_period.html %}
+        </p>
+        <!-- <p>{{ work.summary }}</p> -->
+        <!-- <p> -->
+        <!-- {% if work.highlights %} -->
+        <!-- <ul class="highlights"> -->
+        <!--   {% for highlight in work.highlights %} -->
+        <!--   <li>{{ highlight }}</li> -->
+        <!--   {% endfor %} -->
+        <!-- </ul> -->
+        <!-- {% endif %} -->
+        <!-- </p> -->
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.resume.languages %}
+  <section class="cv-list">
+    <i class="fa fa-language float"></i>
+    <h1>Languages</h1>
+    <div class="languages">
+      {% for lang in site.data.resume.languages %}
+      <div>
+        <p><strong>{{ lang.language }}</strong></p>
+        <p>{{ lang.fluency }}</p>
+      </div>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.resume.awards %}
+  <section class="cv-list">
+    <i class="fa fa-trophy float"></i>
+    <h1>Awards</h1>
+    <ul class="item">
+      {% for award in site.data.resume.awards %}
+      <li>
+        <p>
+          <strong>{{ award.title }}</strong>, {{ award.awarder }}
+        </p>
+        <p class="period">{{ award.date | date: "%B, %Y" }}</p>
+        <p>{{ award.summary }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.resume.references %}
+  <section class="cv-list">
+    <i class="fa fa-thumbs-up float"></i>
+    <h1>References</h1>
+    <ul class="item">
+      {% for ref in site.data.resume.references %}
+      <li>
+        <p>
+          <strong>{{ ref.name }}</strong>
+        </p>
+        <blockquote>
+          <p>{{ ref.reference }}</p>
+        </blockquote>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>

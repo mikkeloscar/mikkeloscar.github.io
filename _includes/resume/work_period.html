@@ -1,0 +1,29 @@
+{% assign start = work.start_date | date: "%s" %}
+{% assign end = work.end_date | date: "%s" %}
+{% assign months = end | minus: start | divided_by: 2592000 %}
+{% assign years = months | divided_by: 12 %}
+
+{% if years == 1 %}
+  {% assign time = "1 year" %}
+{% elsif years > 1 %}
+  {% assign time = years | append: " years" %}
+{% elsif months == 1 %}
+  {% assign time = "1 month" %}
+{% elsif months > 1 %}
+  {% assign time = months | append: " months" %}
+{% else %}
+  {% assign time = "" %}
+{% endif %}
+
+{% if time == "" and work.end_date != null and work.end_date != "present" %}
+  {{ work.start_date | date: "%B, %Y" }}
+{% else %}
+  {{ work.start_date | date: "%B, %Y" }} - {% if work.end_date == null %}
+    present
+  {% else %}
+    {{ work.end_date | date: "%B, %Y" }}
+  {% endif %}
+  {% if time != "" %}
+    <span class="time"><i class="fa fa-clock-o"></i> {{ time }}</span>
+  {% endif %}
+{% endif %}
