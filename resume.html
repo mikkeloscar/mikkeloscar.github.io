@@ -118,16 +118,16 @@ permalink: /resume/
         <p class="period">
           {% include resume/education_period.html %}
         </p>
-        <!-- <p>{{ work.summary }}</p> -->
-        <!-- <p> -->
-        <!-- {% if work.highlights %} -->
-        <!-- <ul class="highlights"> -->
-        <!--   {% for highlight in work.highlights %} -->
-        <!--   <li>{{ highlight }}</li> -->
-        <!--   {% endfor %} -->
-        <!-- </ul> -->
-        <!-- {% endif %} -->
-        <!-- </p> -->
+        {% if education.courses %}
+        <div class="courses">
+          <a href="#" onclick="showCourses(event)"><i class="fa fa-plus"></i> Courses</a>
+          <ul>
+            {% for course in education.courses %}
+            <li>{{ course }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -186,3 +186,20 @@ permalink: /resume/
   </section>
   {% endif %}
 </div>
+
+<script>
+function showCourses(e) {
+  e.preventDefault();
+  var parent = e.target.parentNode;
+  var fa = e.target.getElementsByTagName("i")[0];
+  if (parent.classList.contains("active")) {
+    parent.classList.remove("active");
+    fa.classList.add("fa-plus");
+    fa.classList.remove("fa-minus");
+  } else {
+    parent.classList.add("active");
+    fa.classList.add("fa-minus");
+    fa.classList.remove("fa-plus");
+  }
+}
+</script>
