@@ -1,0 +1,29 @@
+github_user: mikkeloscar
+highlighted:
+  - name: arch-travis
+    user: mikkeloscar
+    description: >
+      Arch-travis provides a chroot based Arch Linux build environment for
+      Travis-CI builds.
+  - name: go-wlc
+    user: mikkeloscar
+    description: Complete Go bindings for <a href="https://github.com/Cloudef/wlc">wlc</a>.
+  - name: maze
+    user: mikkeloscar
+    description: >
+      Maze is an automated build system for Archlinux packages. It's currently
+      in the early stages and supports automatic builds of AUR packages.
+      Eventually it will also support building of custom PKGBUILDs as well as
+      packages from ABS. It will also gain support for rebuilding a set of
+      packages for instance when required because of ABI changes in gcc etc.
+  - name: sway
+    user: SirCmpwn
+    website: http://swaywm.org
+    description: >
+      Sway is an i3-compatible window manager for Wayland. I'm not the creator
+      of this project, but a core contributer.
+
+# ignored projects
+ignored:
+  - maze-beta-packages
+  - test-packages

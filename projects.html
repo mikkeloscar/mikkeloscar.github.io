@@ -1,0 +1,63 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<h1>Highlighted projects</h1>
+<ul class="highlighted">
+  {% for project in site.data.projects.highlighted %}
+  <li>
+    <h3>
+      <a href="https://github.com/{{ project.user }}/{{ project.name }}">
+        {{ project.user }}/{{ project.name }}
+      </a>
+    </h3>
+    {% if project.website %}
+    <div class="website">
+      <i class="fa fa-home"></i> <a href="{{ project.website }}">{{ project.website }}</a>
+    </div>
+    {% endif %}
+    <p>{{ project.description }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Other projects</h2>
+<ul id="github-projects" class="other"></ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var highlighted = [
+  {% for project in site.data.projects.highlighted %}
+  "{{ project.name }}",
+  {% endfor %}
+  ];
+
+  var ignored = [
+  {% for project in site.data.projects.ignored %}
+  "{{ project }}",
+  {% endfor %}
+  ];
+
+  var url = "https://api.github.com/users/{{ site.data.projects.github_user }}/repos?per_page=100&sort=pushed";
+
+  var projects_list = $("#github-projects");
+
+  $.get(url, function (data) {
+    data.forEach(function (project) {
+      if (!project.fork && highlighted.indexOf(project.name) === -1 && ignored.indexOf(project.name) === -1) {
+        var title = project.name;
+        if (project.description) {
+          title += " - " + project.description;
+        }
+        var elem = $("<li><a href=\""+ project.html_url + "\">"+
+            title + "</a></li>");
+        projects_list.append(elem);
+      }
+    });
+  });
+});
+</script>

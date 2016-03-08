@@ -764,3 +764,36 @@ body.home {
     }
   }
 }
+
+// projects
+.highlighted {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+
+    h3 {
+      margin: 0;
+    }
+
+    p, .website {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.other {
+  li {
+    border-bottom: 1px solid #ddd;
+
+    a {
+      display: block;
+      &:hover {
+        background: $grey-color-very-light;
+        text-decoration: none;
+      }
+    }
+  }
+}
