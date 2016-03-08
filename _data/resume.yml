@@ -4,7 +4,7 @@ basics:
   picture: "headshot.png"
   email: "m@moscar.net"
   phone: "(+45) 60 72 28 40"
-  website: "http://moscar.net"
+  website: "https://moscar.net"
   summary: >
     Richard hails from Tulsa. He has earned degrees from the University of
     Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied
@@ -34,11 +34,11 @@ work:
     start_date: "2011-01-26"
     end_date: "2015-12-01"
     summary: >
-      Provide personal IT-support for students and employees. Write guides for
-      setting up various software. Identify critical server crashes based on
-      user reports and assigning issues to the responsible departments.
+      Provided wide range of IT-support for students and employees. Wrote guides
+      for setting up various software. Identified critical server crashes based
+      on user reports and assigned issues to the responsible departments.
     highlights:
-      - "Developed various tools to automate work flows for me and my colleagues."
+      - "Developed various tools to automate workflows for me and my colleagues."
 
   - company: "Grammatic.al"
     position: "Backend developer"
@@ -146,8 +146,3 @@ awards:
     summary: >
       Won best implementation in a competition about implementing IE9 features.
       Was awarded 10,000 DKK.
-
-# references:
-#   - name: "Jane Doe"
-#     reference: >
-#       Hej med dig din noob
