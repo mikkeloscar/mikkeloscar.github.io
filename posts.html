@@ -5,6 +5,10 @@ permalink: /posts/
 ---
 
 <ul class="post-list">
+  {% assign posts = site.posts.size %}
+  {% if posts == 0 %}
+  <li>Nothing to see here, move along...</li>
+  {% endif %}
   {% for post in site.posts %}
   <li>
     {% include readingtime.html %}
