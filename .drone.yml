@@ -9,7 +9,7 @@ deploy:
     user: ansible
     host: $$HOST
     port: $$PORT
-    source: _site
+    source: _site/*
     target: /srv/http/$$HOST
     delete: true
     recursive: true
