@@ -12,7 +12,7 @@ full_name: Mikkel Oscar Lyderik
 headshot: headshot.png
 email: "&#109;&#64;&#109;&#111;&#115;&#99;&#97;&#114;&#46;&#110;&#101;&#116;"
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a software developer with a passion for Linux and Open Source software.
+  I'm a software engineer with a passion for Linux and Open Source software.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://moscar.net" # the base hostname & protocol for your site
 enforce_ssl: moscar.net
